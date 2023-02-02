@@ -11,16 +11,17 @@ const imageArray = [
 const button = document.querySelector("#myBtn");
 const mainDiv = document.querySelector(".mainDiv");
 const image = document.createElement("img");
-
 let i = 0;
-image.src = imageArray[i];
+// image.src = imageArray[i];
 mainDiv.append(image);
+console.log(image);
 
-const chanePhoto = () => {
+const changePhoto = () => {
   image.src = imageArray[i];
   i++;
+
   if (i === imageArray.length) {
     i = 0;
   }
 };
-button.addEventListener("click", chanePhoto);
+button.addEventListener("click", changePhoto);
